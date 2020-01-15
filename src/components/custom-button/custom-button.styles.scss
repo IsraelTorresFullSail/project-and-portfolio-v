@@ -1,0 +1,33 @@
+.custom-button {
+  width: 150px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins';
+  font-size: 1.25em;
+  font-weight: 700;
+  background-color: #8ACD42;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+
+  &.btn-add {
+    width: 100px;
+    background-image: linear-gradient(to bottom, #FEBF7A , #FD9015);
+    color: white;
+
+    &:hover {
+      background-color: #FD9015;
+      border: none;
+    }
+  }
+}

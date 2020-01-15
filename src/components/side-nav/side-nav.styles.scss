@@ -1,6 +1,10 @@
 .sidenav {
     width: 8%;
     padding: 60px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .options {
@@ -13,24 +17,27 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    font-size: 1em;
-    font-weight: 600;
+    font-size: 0.9em;
+    font-weight: 500;
     color: #ffffff;
-    border-radius: 40px;
-    width: 120px;
-    height: 120px;
+    border-radius: 20px;
+    width: 100px;
+    height: 100px;
     padding: 20px 12px;
+    margin-bottom: 10px;
     transition: all ease .2s;
 
     .icon {
         width: 32px;
         height: auto;
+        margin-bottom: 10px;
     }
 
     &:hover {
-        background-color: #ffffff;
-        color: #3F80FF;
-        box-shadow: 0px 0px 11px #ffffff50;
+        background-color: #fefefe;
+        color: #1F2838;
+        //box-shadow: 0px 0px 11px #ffffff50;
+        box-shadow: 0 6px 15px rgba(0,0,0,0.2), 0px -2px 15px rgba(255,255,255,0.2);
     }
 }
 

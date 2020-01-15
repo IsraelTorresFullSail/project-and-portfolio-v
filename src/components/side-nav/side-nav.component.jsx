@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import RandomUser from '../random-user/random-user.component';
+import Help from '../help/help.component'
+
 import { FaUser } from 'react-icons/fa';
 import { FaMountain } from 'react-icons/fa'
 import { FaLeaf } from 'react-icons/fa'
@@ -11,6 +14,7 @@ import './side-nav.styles.scss';
 
 const SideNav = () => (
     <div className='sidenav'>
+        <RandomUser />
         <div className='options'>
             <Link className='option' to='/profile'>
                 <FaUser className='icon' />
@@ -33,6 +37,7 @@ const SideNav = () => (
                 Instructions
             </Link>
         </div>
+        <Help />
     </div>
 );
 

@@ -5,7 +5,7 @@ body {
   font-family: 'Poppins';
   font-size: 16px;
   font-weight: 400;
-  background-image: linear-gradient(to bottom, #6EACFF , #1865FA);
+  background-color: #1F2838;
   background-repeat: no-repeat;
   height: 100%;
 }
@@ -37,6 +37,14 @@ a {
   width: 92%;
 }
 
+.cont-nutrition {
+  width: 58%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
 .right-side {
   background-image: linear-gradient(to bottom left, #FFFFFF , #CCDBEC);
   border-top-left-radius: 30px;
@@ -49,6 +57,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    padding-right: 15px;
 }
 
 .logo {

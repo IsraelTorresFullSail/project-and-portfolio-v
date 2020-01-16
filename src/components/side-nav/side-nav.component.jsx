@@ -5,8 +5,8 @@ import RandomUser from '../random-user/random-user.component';
 import Help from '../help/help.component'
 
 import { FaUser } from 'react-icons/fa';
-import { FaMountain } from 'react-icons/fa'
-import { FaLeaf } from 'react-icons/fa'
+import { GiStairsGoal } from 'react-icons/gi'
+import { IoIosLeaf } from 'react-icons/io'
 import { GiHotMeal } from 'react-icons/gi'
 import { FaClipboardList } from 'react-icons/fa'
 
@@ -21,11 +21,11 @@ const SideNav = () => (
                 Profile
             </Link>
             <Link className='option' to='/goal'>
-                <FaMountain className='icon' />
+                <GiStairsGoal className='icon' />
                 Goal
             </Link>
             <Link className='option' to='/nutrition'>
-                <FaLeaf className='icon' />
+                <IoIosLeaf className='icon' />
                 Nutrition
             </Link>
             <Link className='option' to='/recipes'>

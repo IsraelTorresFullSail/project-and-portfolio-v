@@ -17,16 +17,6 @@ class RecipeForm extends React.Component {
         }
     }
 
-    handleSubmit = async event => {
-        event.preventDefault();
-
-        const { title, preparation, ingredList } = this.state;
-
-
-
-        this.setState({ title: '', preparation: '',  ingredList: []});
-    }
-
     handleChange = event => {
         const { value, name } = event.target;
 
@@ -46,7 +36,60 @@ class RecipeForm extends React.Component {
         this.setState({ingredient: ''});
     }
 
-    // function to add a new recipe
+    handleSubmit = async event => {
+        event.preventDefault();
+
+        const { title, preparation, ingredList } = this.state;
+
+        let ingredForRecipe = [];
+        ingredList.map(ingredient => {
+            return ingredForRecipe.push(ingredient.iName);
+        })
+
+        // API url
+        let app_id = 'adc095e3';
+        let app_key = '998f1868f0f3bdc14e1070d4772ae0f3';
+        const urlAPI = 'https://api.edamam.com/api/nutrition-details?app_id=' + app_id + '&app_key=' + app_key;
+
+        // Recipe example
+        const recipe = {
+            "title": title,
+            "prep": preparation,
+            "ingr": ingredForRecipe
+        }
+        console.log(recipe);
+
+        // Method POST
+        const option = {
+            method: 'POST',
+            mode: 'cors',
+            body: JSON.stringify(recipe),
+            headers: {
+                'content-type': 'application/json'
+            }
+        }
+
+        // Fetch request
+        fetch(urlAPI, option)
+            .then( response => {
+                if(response.ok) {
+                    return response.json();
+                } else {
+                    throw response;
+                }
+            })
+            .then ( data => {
+                console.log(data);
+                console.table(data.totalNutrients);
+                console.table(data.totalDaily);
+                console.table(data.totalNutrientsKCal);
+            })
+            .catch( err => {
+                console.log(err);
+            })
+
+        this.setState({ title: '', preparation: '',  ingredList: []});
+    }
     
 
     render() {
@@ -81,7 +124,7 @@ class RecipeForm extends React.Component {
                             value={this.state.ingredient}
                             handleChange={this.handleChange}
                             placeholder='Add ingredients...'
-                            required
+                            //required
                         />
                         <CustomButton type='button' isBtnAdd onClick={this.createIngredient}> Add </CustomButton>
                     </div>

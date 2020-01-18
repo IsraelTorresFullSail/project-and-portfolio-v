@@ -18,21 +18,23 @@ class NutritionAnalisys extends React.Component {
 
         this.state = {
             results: [],
-            image: []
+            images: [],
+            imageRecipe: []
         }
     }
 
     // Function to get results from Local Storage
     async componentDidMount() {
-        let results;
+        let results;                                                                                                                  // eslint-disable-next-line
         if(results = JSON.parse(localStorage.getItem('results'))) {
             results = JSON.parse(localStorage.getItem('results'));
             this.setState({results: results});
         } else {
-            alert('No results on store. Please fill the form.')
+            alert('Store empty. Please start filling the form.')
         }
 
-        fetch('../../../public/images.js', {
+        // Load stock images
+        fetch('data/images.json', {
             headers : { 
               'Content-Type': 'application/json',
               'Accept': 'application/json'
@@ -47,7 +49,7 @@ class NutritionAnalisys extends React.Component {
                 }
             })
             .then ( data => {
-                console.log(data.images)
+                this.setState({images: data.images});
             })
             .catch( err => {
                 console.log(err);
@@ -55,33 +57,33 @@ class NutritionAnalisys extends React.Component {
     }
 
     // Funtion to save a random image for testing
-    onDrop() {
-        // Fetch request
-        fetch('../../images.js')
-            .then( response => {
-                if(response.ok) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            })
-            .then ( data => {
-                console.log(data.images)
-                let imageRecipe;
-                let id = Math.floor(Math.random() * 12) + 1;
+    onDrop = e => {
+        e.preventDefault();
+        let imageRecipe;
+        let images = [];
+        images = [...this.state.images];
 
-                data.images.filter(data.images.id === id).map(img => {
-                    alert('Uploading a stock image for testing reason');
-                    return imageRecipe = [{image: img.src, imgId: img.id}]
-                });
-                this.setState({
-                    imageRecipe
-                });
-                console.log(imageRecipe);
-            })
-            .catch( err => {
-                console.log(err);
-            })
+        let id = Math.floor(Math.random() * 12) + 1;
+
+        for (let i = 0; i < images.length; i++) {
+            if(images[i].id === id) {
+                alert('Uploading a stock image for testing reason');
+                imageRecipe = [{image: images[i].src, imgId: images[i].id}]
+            }
+            
+        }
+        console.log(imageRecipe);
+        this.setState({imageRecipe: imageRecipe});
+    }
+
+    // Save recipe with image in Local storage
+    saveRecipe = e => {
+        e.preventDefault();
+         let recipe = [];
+         recipe = [...this.state.results, ...this.state.imageRecipe];
+
+         // Save recipe on Local Storage
+         localStorage.setItem('recipes', JSON.stringify(recipe));
     }
 
     render() {
@@ -107,10 +109,9 @@ class NutritionAnalisys extends React.Component {
                     <ResultTile icon={<GiWheat className='icon' />} result={<h3>{carbohydrates}</h3>} boxName='carbs' />
 
                     <UploadImageBox icon={<IoMdAdd className='icon' />} btnText={<h3>Add Image</h3>} onClick={this.onDrop} />
-                    <button onClick={this.onDrop}>Add Img</button>
                 </div>
                 <div className='cont-btn-submit'>
-                    <CustomButton type='button'> Save </CustomButton>
+                    <CustomButton type='button' onClick={this.saveRecipe}> Save </CustomButton>
                 </div>
             </div>
         )

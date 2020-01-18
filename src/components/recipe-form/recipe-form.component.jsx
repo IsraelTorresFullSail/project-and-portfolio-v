@@ -13,7 +13,8 @@ class RecipeForm extends React.Component {
             title: '',
             preparation: '',
             ingredient: '',
-            ingredList: []
+            ingredList: [],
+            results: []
         }
     }
 
@@ -51,13 +52,12 @@ class RecipeForm extends React.Component {
         let app_key = '998f1868f0f3bdc14e1070d4772ae0f3';
         const urlAPI = 'https://api.edamam.com/api/nutrition-details?app_id=' + app_id + '&app_key=' + app_key;
 
-        // Recipe example
+        // Recipe object
         const recipe = {
             "title": title,
             "prep": preparation,
             "ingr": ingredForRecipe
         }
-        console.log(recipe);
 
         // Method POST
         const option = {
@@ -79,21 +79,23 @@ class RecipeForm extends React.Component {
                 }
             })
             .then ( data => {
-                console.log(data);
-                console.table(data.totalNutrients);
-                console.table(data.totalDaily);
-                console.table(data.totalNutrientsKCal);
+                let results = [];
+                results.push({calories: data.calories, proteins: data.totalNutrients.PROCNT.quantity, fats: data.totalNutrients.FAT.quantity, carbohydrates: data.totalNutrients.CHOCDF.quantity});
+                this.setState({results: results});
+
+                // Save result on Local Storage
+                localStorage.setItem('results', JSON.stringify(this.state.results));
             })
             .catch( err => {
                 console.log(err);
             })
 
+        // Clear form
         this.setState({ title: '', preparation: '',  ingredList: []});
     }
     
 
     render() {
-        console.log(this.state.ingredList)
         let ingredList = this.state.ingredList.map(ingredient => {
             return <div className='ingredient-item' key={ingredient.iId}><h6 className='h6'>{ingredient.iName}</h6></div>
         })

@@ -5,6 +5,7 @@ import './App.css';
 import SideNav from './components/side-nav/side-nav.component'
 import logo from './assets/logo.png';
 import RecipeForm from './components/recipe-form/recipe-form.component';
+import NutritionAnalisys from './components/nutrition-analisys/nutrition-analisys.component';
 
 class App extends React.Component {
   constructor() {
@@ -30,6 +31,7 @@ class App extends React.Component {
         <div className='left-side'>
           <div className='cont-nutrition'>
             <RecipeForm />
+            <NutritionAnalisys />
           </div>
           <div className='right-side'>
             <div className='container-logo'>

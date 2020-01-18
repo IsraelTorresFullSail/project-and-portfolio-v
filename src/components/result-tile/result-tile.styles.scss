@@ -1,0 +1,15 @@
+.result-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #6EACFF, #1865FA);
+    border-radius: 20px;
+    width: 19%;
+    height: 205px;
+    padding: 30px;
+    color: #ffffff;
+    font-family: 'Poppins';
+    font-size: 1em;
+    font-weight: 700;
+}

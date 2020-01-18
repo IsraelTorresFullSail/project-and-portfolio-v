@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import RandomUser from '../random-user/random-user.component';
 import Help from '../help/help.component'
 
-import { FaUser } from 'react-icons/fa';
+import { IoMdPerson } from 'react-icons/io';
 import { GiStairsGoal } from 'react-icons/gi'
 import { IoIosLeaf } from 'react-icons/io'
 import { GiHotMeal } from 'react-icons/gi'
@@ -17,7 +17,7 @@ const SideNav = () => (
         <RandomUser />
         <div className='options'>
             <Link className='option' to='/profile'>
-                <FaUser className='icon' />
+                <IoMdPerson className='icon' />
                 Profile
             </Link>
             <Link className='option' to='/goal'>

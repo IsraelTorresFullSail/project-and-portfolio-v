@@ -1,0 +1,19 @@
+.upload-image-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #FEBF7A, #FD9015);
+    border-radius: 20px;
+    width: 19%;
+    height: 205px;
+    padding: 10px;
+    color: #ffffff;
+    cursor: pointer;
+
+    h3 {
+        font-family: 'pt-sans', sans-serif;
+        font-size: 2em;
+        font-weight: 700;
+    }
+}

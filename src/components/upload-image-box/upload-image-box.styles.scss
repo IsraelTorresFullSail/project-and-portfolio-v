@@ -10,10 +10,16 @@
     padding: 10px;
     color: #ffffff;
     cursor: pointer;
+    border: none;
+    outline:none;
 
     h3 {
         font-family: 'pt-sans', sans-serif;
         font-size: 2em;
         font-weight: 700;
+    }
+
+    &:hover {
+        background-image: linear-gradient(to bottom, #FEBF7A, #FEBF7A);
     }
 }

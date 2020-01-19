@@ -1,0 +1,40 @@
+.recipe-preview-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    padding: 25px 25px 0px 25px;
+
+    h3 {
+        width: 100%;
+        color: #3E4F70;
+        font-family: 'Poppins';
+        font-size: 1.25em;
+        font-weight: 700;
+        margin-bottom: 0px !important;
+    }
+
+    .info-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 25px;
+
+        .icon-info {
+            margin-right: 15px;
+            width: 24px;
+            height: 24px;
+            color: #4287FC;
+        }
+
+        h5 {
+            font-family: 'Poppins';
+            font-size: 0.875em;
+            font-weight: 700;
+            color: #7D7D7D;
+        }
+    }
+}

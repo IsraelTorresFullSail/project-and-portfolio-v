@@ -6,7 +6,7 @@ import CustomButton from '../custom-button/custom-button.component';
 
 import { GoFlame } from 'react-icons/go';
 import { MdFitnessCenter } from 'react-icons/md';
-import { GiWaterDrop } from 'react-icons/gi';
+import { GiFat } from 'react-icons/gi';
 import { GiWheat } from 'react-icons/gi';
 import { IoMdAdd } from 'react-icons/io';
 
@@ -29,9 +29,7 @@ class NutritionAnalisys extends React.Component {
         if(results = JSON.parse(localStorage.getItem('results'))) {
             results = JSON.parse(localStorage.getItem('results'));
             this.setState({results: results});
-        } else {
-            alert('Store empty. Please start filling the form.')
-        }
+        } 
 
         // Load stock images
         fetch('data/images.json', {
@@ -105,7 +103,7 @@ class NutritionAnalisys extends React.Component {
                 <div className='result-grid'>
                     <ResultTile icon={<GoFlame className='icon' />} result={<h3>{calories}</h3>} boxName='calories' />
                     <ResultTile icon={<MdFitnessCenter className='icon' />} result={<h3>{proteins}</h3>} boxName='proteins' />
-                    <ResultTile icon={<GiWaterDrop className='icon' />} result={<h3>{fats}</h3>} boxName='fats' />
+                    <ResultTile icon={<GiFat className='icon' />} result={<h3>{fats}</h3>} boxName='fats' />
                     <ResultTile icon={<GiWheat className='icon' />} result={<h3>{carbohydrates}</h3>} boxName='carbs' />
 
                     <UploadImageBox icon={<IoMdAdd className='icon' />} btnText={<h3>Add Image</h3>} onClick={this.onDrop} />

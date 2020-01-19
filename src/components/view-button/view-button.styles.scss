@@ -1,0 +1,18 @@
+.view-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #6EACFF, #1865FA);
+    border-radius: 20px 0px 20px 0px;
+    padding: 25px;
+    color: #ffffff;
+    font-family: 'Poppins';
+    font-size: 1.125em;
+    font-weight: 700;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: none;
+    outline: none;
+}

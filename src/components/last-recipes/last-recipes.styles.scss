@@ -1,0 +1,36 @@
+.last-recipes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #ffffff;
+    width: 90%;
+    min-height: 415px;
+    border-radius: 30px;
+    margin: 0px auto;
+    padding: 25px;
+
+    .recipe-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .last-image {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            border-radius: 50%;
+            box-shadow: 3px 15px 30px 0px rgba(0,0,0,0.16);
+            width: 120px;
+            height: 120px;
+        }
+
+        h4 {
+            color: #3E4F70;
+            font-size: 1em;
+            font-weight: 700;
+        }
+    }
+}

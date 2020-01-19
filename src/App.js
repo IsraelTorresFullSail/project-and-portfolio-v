@@ -6,25 +6,34 @@ import SideNav from './components/side-nav/side-nav.component'
 import logo from './assets/logo.png';
 import RecipeForm from './components/recipe-form/recipe-form.component';
 import NutritionAnalisys from './components/nutrition-analisys/nutrition-analisys.component';
+import RecipePreview from './components/recipe-preview/recipe-preview.component';
+import RecipeImage from './components/recipe-image/recipe-image.component';
+import LastRecipes from './components/last-recipes/last-recipes.component';
 
 class App extends React.Component {
   constructor() {
     super();
 
     this.state = {
-      
+      recipes: []
     }
   }
 
   componentDidMount() {
-
-  }
-
-  componentWillUnmount() {
-
+    let recipes;                                                                                                                  // eslint-disable-next-line
+    if(recipes = JSON.parse(localStorage.getItem('recipes'))) {
+        recipes = JSON.parse(localStorage.getItem('recipes'));
+        this.setState({recipes: recipes});
+    } else {
+        alert('Store empty. Please start filling the form.')
+    }
   }
 
   render() {
+    let recipeImage = '';
+    for(let i = 0; i < this.state.recipes.length; i++) {
+      recipeImage = this.state.recipes[1].image;
+    }
     return (
       <div className='container'>
         <SideNav />
@@ -37,6 +46,12 @@ class App extends React.Component {
             <div className='container-logo'>
               <img className='logo' src={logo} alt="Logo" />
             </div>
+            <RecipePreview 
+              image={<RecipeImage src={recipeImage}
+              alt='Recipe Picture' />}
+            >
+            </RecipePreview>
+            <LastRecipes />
             <Switch>
               <Route exact path='/' />
               <Route path='/goal' />

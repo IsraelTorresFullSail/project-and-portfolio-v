@@ -13,9 +13,11 @@
   border-radius: 20px;
   border: none;
   cursor: pointer;
+  outline:none;
 
   &:hover {
-    
+      background-color: #A9D17D;
+      border: none;
   }
 
   &.btn-add {
@@ -24,8 +26,7 @@
     color: white;
 
     &:hover {
-      background-color: #FD9015;
-      border: none;
+      background-image: linear-gradient(to bottom, #FEBF7A , #FEBF7A);
     }
   }
 }

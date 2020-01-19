@@ -32,7 +32,7 @@ class App extends React.Component {
   render() {
     let recipeImage = '';
     for(let i = 0; i < this.state.recipes.length; i++) {
-      recipeImage = this.state.recipes[1].image;
+      recipeImage = this.state.recipes[i][1].image;
     }
     return (
       <div className='container'>

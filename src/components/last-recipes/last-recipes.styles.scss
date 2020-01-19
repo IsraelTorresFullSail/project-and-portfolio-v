@@ -3,18 +3,21 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
     background-color: #ffffff;
     width: 90%;
-    min-height: 415px;
+    min-height: 450px;
     border-radius: 30px;
     margin: 0px auto;
-    padding: 25px;
+    padding: 25px 25px 80px 25px;
+    position: relative;
 
     .recipe-item {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: 23%;
 
         .last-image {
             display: flex;
@@ -29,8 +32,9 @@
 
         h4 {
             color: #3E4F70;
-            font-size: 1em;
+            font-size: 0.875em;
             font-weight: 700;
+            text-align: center;
         }
     }
 }

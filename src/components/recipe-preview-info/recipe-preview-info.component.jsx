@@ -30,10 +30,10 @@ class RecipePreviewInfo extends React.Component {
         let fats = '';
         let carbohydrates = '';
         for(let i = 0; i < this.state.recipeInfo.length; i++) {
-            recipeName = this.state.recipeInfo[0].title;
-            calories = this.state.recipeInfo[0].calories;
-            fats = this.state.recipeInfo[0].fats.toFixed(2);
-            carbohydrates = this.state.recipeInfo[0].carbohydrates.toFixed(2);
+            recipeName = this.state.recipeInfo[i][0].title;
+            calories = this.state.recipeInfo[i][0].calories;
+            fats = this.state.recipeInfo[i][0].fats.toFixed(2);
+            carbohydrates = this.state.recipeInfo[i][0].carbohydrates.toFixed(2);
         }
         return(
             <div className='recipe-preview-info'>

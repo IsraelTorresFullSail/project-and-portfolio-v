@@ -2,6 +2,8 @@ import React from 'react';
 
 import './last-recipes.styles.scss';
 
+import ViewButton from '../view-button/view-button.component';
+
 class LastRecipes extends React.Component {
     constructor() {
         super();
@@ -21,18 +23,19 @@ class LastRecipes extends React.Component {
       }
 
     render() {
-        let recipeName = '';
-        let recipeImage = '';
-        for(let i = 0; i < this.state.recipes.length; i++) {
-            recipeImage = this.state.recipes[1].image;
-            recipeName = this.state.recipes[0].title;
-        }
+        let recipeItem = this.state.recipes.map(item => {
+            let key = Math.random();
+            return <div key={key} className='recipe-item'>
+                        <img className='last-image' src={item[1].image} alt='Recipe' />
+                        <h4>{item[0].title}</h4>
+                    </div>
+        })
+
         return(
             <div className='last-recipes'>
-                <div className='recipe-item'>
-                    <img className='last-image' src={recipeImage} alt='Recipe' />
-                    <h4>{recipeName}</h4>
-                </div>
+                {recipeItem}
+
+                <ViewButton type='button' isBtnViewAll > View All </ViewButton>
             </div>
         )
     }

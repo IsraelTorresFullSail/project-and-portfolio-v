@@ -80,8 +80,14 @@ class NutritionAnalisys extends React.Component {
          let recipe = [];
          recipe = [...this.state.results, ...this.state.imageRecipe];
 
-         // Save recipe on Local Storage
-         localStorage.setItem('recipes', JSON.stringify(recipe));
+        // Save recipe on Local Storage
+        // Parse any JSON previously stored in recipes
+        let existingRecipes = JSON.parse(localStorage.getItem("recipes"));
+        if(existingRecipes == null) existingRecipes = [];
+        localStorage.setItem('currentRecipe', JSON.stringify(recipe));
+        // Save all recipes back to local storage
+        existingRecipes.push(recipe);
+        localStorage.setItem('recipes', JSON.stringify(existingRecipes));
     }
 
     render() {

@@ -15,4 +15,31 @@
     bottom: 0;
     border: none;
     outline: none;
+    cursor: pointer;
+
+    &:hover {
+        background-image: linear-gradient(to bottom, #6EACFF, #6EACFF);
+    }
+}
+
+.btn-view-all {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom, transparent, transparent);
+    padding: 25px;
+    color: #8ACD42;
+    font-size: 1.125em;
+    font-weight: 700;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: none;
+    outline: none;
+
+    &:hover {
+        background-image: linear-gradient(to bottom, transparent, transparent);
+        color: #FD9015;
+    }
 }

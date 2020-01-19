@@ -16,6 +16,10 @@ const SideNav = () => (
     <div className='sidenav'>
         <RandomUser />
         <div className='options'>
+            <Link className='option' to='/home'>
+                <IoIosLeaf className='icon' />
+                Home
+            </Link>
             <Link className='option' to='/profile'>
                 <IoMdPerson className='icon' />
                 Profile
@@ -23,10 +27,6 @@ const SideNav = () => (
             <Link className='option' to='/goal'>
                 <GiStairsGoal className='icon' />
                 Goal
-            </Link>
-            <Link className='option' to='/nutrition'>
-                <IoIosLeaf className='icon' />
-                Nutrition
             </Link>
             <Link className='option' to='/recipes'>
                 <GiHotMeal className='icon' />

@@ -1,11 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import './last-recipes.styles.scss';
+import './recipes.styles.scss';
 
-import ViewButton from '../view-button/view-button.component';
-
-class LastRecipes extends React.Component {
+class RecipesPage extends React.Component {
     constructor() {
         super();
 
@@ -24,7 +21,8 @@ class LastRecipes extends React.Component {
     }
 
     render() {
-        let recipeItem = this.state.recipes.slice(0, 8).map(item => {
+
+        let recipeItem = this.state.recipes.slice(0, 16).map(item => {
             let key = Math.random();
             return <div key={key} className='recipe-item'>
                         <img className='last-image' src={item[1].image} alt='Recipe' />
@@ -33,15 +31,12 @@ class LastRecipes extends React.Component {
         })
 
         return(
-            <div className='last-recipes'>
+            <div className='recipes-wrapper'>
                 {recipeItem}
 
-                <Link className='link' to='/recipes'>
-                    <ViewButton type='button' isBtnViewAll > View All </ViewButton>
-                </Link>
             </div>
         )
     }
 };
 
-export default LastRecipes;
+export default RecipesPage;

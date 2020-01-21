@@ -10,8 +10,24 @@ class GoalPage extends React.Component {
         super();
 
         this.state = {
-
+            goal: ''
         }
+    }
+
+    handleChange = event => {
+        const { value, name } = event.target;
+
+        this.setState({ [name]: value })
+    }
+
+    handleSubmit = async event => {
+        event.preventDefault();
+
+        // Save goal on Local Storage
+        localStorage.setItem('goal', JSON.stringify(this.state.goal));
+
+        // Clear form
+        this.setState({ goal: ''});
     }
 
     render() {

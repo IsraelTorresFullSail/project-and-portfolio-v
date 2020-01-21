@@ -6,6 +6,7 @@ import SideNav from './components/side-nav/side-nav.component'
 import logo from './assets/logo.png';
 import RecipeForm from './components/recipe-form/recipe-form.component';
 import NutritionAnalisys from './components/nutrition-analisys/nutrition-analisys.component';
+import CaloriesGoal from './components/calories-goal/calories-goal.component';
 
 import NutritionPage from './pages/nutrition/nutrition.component';
 import RecipesPage from './pages/recipes/recipes.component';
@@ -26,6 +27,7 @@ class App extends React.Component {
         <SideNav />
         <div className='left-side'>
           <div className='cont-nutrition'>
+            <CaloriesGoal />
             <RecipeForm />
             <NutritionAnalisys />
           </div>

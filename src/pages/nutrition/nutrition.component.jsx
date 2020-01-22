@@ -32,8 +32,8 @@ class NutritionPage extends React.Component {
         return(
             <div>
                 <RecipePreview 
-                image={<RecipeImage src={recipeImage}
-                alt='Recipe Picture' />}
+                    image={<RecipeImage src={recipeImage}
+                    alt='Recipe Picture' />}
                 >
                 </RecipePreview>
                 <LastRecipes />

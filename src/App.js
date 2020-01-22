@@ -11,6 +11,7 @@ import CaloriesGoal from './components/calories-goal/calories-goal.component';
 import NutritionPage from './pages/nutrition/nutrition.component';
 import RecipesPage from './pages/recipes/recipes.component';
 import GoalPage from './pages/goal/goal.component';
+import RecipeDetails from './pages/recipe-details/recipe-details.component';
 
 class App extends React.Component {
   constructor() {
@@ -42,6 +43,7 @@ class App extends React.Component {
               <Route path='/profile' />
               <Route path='/goal' component={GoalPage} />   
               <Route path='/recipes' component={RecipesPage} />
+              <Route path='/recipe-details' component={RecipeDetails} />
               <Route path='/instructions' />
             </Switch>
           </div>

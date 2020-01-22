@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './recipe.preview.styles.scss';
 
@@ -10,7 +11,9 @@ const RecipePreview = (props) => (
         {props.image}
 
         <RecipePreviewInfo />
-        <ViewButton type='button' > View Recipe </ViewButton>
+        <Link className='link' to='/recipe-details'>
+            <ViewButton type='button' > View Recipe </ViewButton>
+        </Link>
     </div>
 );
 

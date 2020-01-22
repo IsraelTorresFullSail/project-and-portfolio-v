@@ -80,8 +80,12 @@ class RecipeForm extends React.Component {
             })
             .then ( data => {
                 let results = [];
-                console.log(title)
-                results.push({title: title, prep: preparation, calories: data.calories, proteins: data.totalNutrients.PROCNT.quantity, fats: data.totalNutrients.FAT.quantity, carbohydrates: data.totalNutrients.CHOCDF.quantity});
+                results.push({title: title, prep: preparation, calories: data.calories, dietLabels: data.dietLabels,
+                             energy: data.totalNutrients.ENERC_KCAL.quantity, proteins: data.totalNutrients.PROCNT.quantity,
+                             fats: data.totalNutrients.FAT.quantity, saturated: data.totalNutrients.FASAT.quantity,
+                             carbohydrates: data.totalNutrients.CHOCDF.quantity, trans: data.totalNutrients.FATRN.quantity,
+                             fiber: data.totalNutrients.FIBTG.quantity, sugars: data.totalNutrients.SUGAR.quantity, 
+                             cholesterol: data.totalNutrients.CHOLE.quantity, sodium: data.totalNutrients.NA.quantity});
                 this.setState({results: results});
 
                 // Save result on Local Storage

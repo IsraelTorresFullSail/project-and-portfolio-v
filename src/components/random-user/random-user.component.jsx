@@ -2,9 +2,7 @@ import React, {Component} from 'react';
 
 import './random-user.styles.scss';
 
-import Modal from 'react-responsive-modal'                                  // eslint-disable-next-line
-//import MyBtn, {BtnUpdate} from '../buttons/MyBtn'
-import { IoIosCheckmarkCircle } from 'react-icons/io'
+import Modal from 'react-responsive-modal'
 import { MdPlace } from 'react-icons/md'
 import { MdPhone } from 'react-icons/md'
 
@@ -85,9 +83,6 @@ async componentDidMount(){
                         <p className='p'><MdPhone className='mdPhone' /> {phone}</p>
                         <p><span className='span'>username: </span>{username}</p>
                         <p><span className='span'>password: </span>{password}</p>
-                    </div>
-                    <div className='btnDiv'>
-                        <button btnText="Update Profile" icon={<IoIosCheckmarkCircle className='ioIosCheckmarkCircle' />}></button>
                     </div>
                 </Modal>
             </div>

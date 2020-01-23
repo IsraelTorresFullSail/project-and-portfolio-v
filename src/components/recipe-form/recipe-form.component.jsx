@@ -37,6 +37,10 @@ class RecipeForm extends React.Component {
         this.setState({ingredient: ''});
     }
 
+    refreshWindow() {
+        window.location.reload(false);
+    }
+
     handleSubmit = async event => {
         event.preventDefault();
 
@@ -91,12 +95,16 @@ class RecipeForm extends React.Component {
                 // Save result on Local Storage
                 localStorage.setItem('results', JSON.stringify(this.state.results));
             })
+            .then (function() {
+                alert('Recipe added successfully');
+                window.location.reload(false);
+            })
             .catch( err => {
                 console.log(err);
             })
 
         // Clear form
-        this.setState({ title: '', preparation: '',  ingredList: []});
+        this.setState({ title: '', preparation: '',  ingredList: []})
     }
     
 

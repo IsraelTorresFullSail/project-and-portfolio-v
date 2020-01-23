@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/********** Modal CSS *************/
+.styles_modal__gNwvD {
+  max-width: 500px;
+  border-radius: 20px;
+}
+
+.styles_closeButton__20ID4 {
+  outline: none;
+  cursor: pointer;
+}

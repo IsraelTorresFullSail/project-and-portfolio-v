@@ -1,6 +1,6 @@
 .custom-button {
-  width: 150px;
-  height: 60px;
+  width: 8.93vw;
+  height: 3.57vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -10,7 +10,7 @@
   font-weight: 700;
   background-color: #8ACD42;
   color: white;
-  border-radius: 20px;
+  border-radius: 1.04vw;
   border: none;
   cursor: pointer;
   outline:none;
@@ -21,7 +21,7 @@
   }
 
   &.btn-add {
-    width: 100px;
+    width: 5.95vw;
     background-image: linear-gradient(to bottom, #FEBF7A , #FD9015);
     color: white;
 

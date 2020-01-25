@@ -4,7 +4,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
-    background: linear-gradient(to top, #deeaf6 80%, #deeaf6 80%, transparent 80%), url("../../assets/bg-profile.jpg") center center no-repeat ;
+    background: linear-gradient(to top, #eaf2f9 80%, transparent 80%), url("../../assets/bg-profile.jpg") center center no-repeat ;
     background-position: 50% 0%;
     background-size: 100%;
     width: 90%;
@@ -13,7 +13,7 @@
     margin: 1.56vw auto 0 auto;
     padding: 4.17vw 1.3vw 0.26vw 1.3vw;
     position: relative;
-    box-shadow: -10px -10px 20px 0px rgba(243,249,255,1), 10px 10px 20px 0px rgba(190,203,216,1);
+    box-shadow: -10px -10px 20px 0px rgba(252,254,255,1), 10px 10px 20px 0px rgba(190,203,216,1);
 
     .imgWrapper {
         margin: 0 auto;
@@ -57,7 +57,7 @@
         padding: 0.52vw 1.04vw;
         margin: 1.04vw 0;
         border-radius: 0.26vw;
-        box-shadow: -5px -5px 10px 0px rgba(243,249,255,1), 5px 5px 10px 0px rgba(190,203,216,1);
+        box-shadow: -5px -5px 10px 0px rgba(252,254,255,1), 5px 5px 10px 0px rgba(190,203,216,1);
 
         .details {
             display: flex;

@@ -1,5 +1,5 @@
 .sidenav {
-    width: 6vw;
+    width: 7vw;
     height: 100vh;
     padding: 3.125vw 0.78vw;
     display: flex;
@@ -35,9 +35,9 @@
     }
 
     &:hover {
-        background-color: #fefefe;
-        color: #1F2838;
-        box-shadow: 0 0.31vw 0.78vw rgba(0,0,0,0.2), 0vw -0.1vw 0.78vw rgba(255,255,255,0.2);
+        background-color: #1a1b1e;
+        color: #ffffff;
+        box-shadow: -10px -10px 20px 0px #242529, 1px 1px 0px 0px #ffffff10, 10px 10px 20px 0px #030303;
     }
 }
 

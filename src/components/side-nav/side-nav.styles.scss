@@ -1,6 +1,7 @@
 .sidenav {
-    width: 6%;
-    padding: 60px 15px;
+    width: 6vw;
+    height: 100vh;
+    padding: 3.125vw 0.78vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -17,27 +18,26 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    font-size: 0.9em;
+    font-size: 0.75vw;
     font-weight: 500;
     color: #ffffff;
-    border-radius: 20px;
-    width: 100px;
-    height: 100px;
-    padding: 20px 12px;
-    margin-bottom: 10px;
+    border-radius: 1.04vw;
+    width: 5.21vw;
+    height: 5.21vw;
+    padding: 1.04vw 0.625vw;
+    margin-bottom: 0.52vw;
     transition: all ease .2s;
 
     .icon {
-        width: 32px;
+        width: 1.67vw;
         height: auto;
-        margin-bottom: 10px;
+        margin-bottom: 0.52vw;
     }
 
     &:hover {
         background-color: #fefefe;
         color: #1F2838;
-        //box-shadow: 0px 0px 11px #ffffff50;
-        box-shadow: 0 6px 15px rgba(0,0,0,0.2), 0px -2px 15px rgba(255,255,255,0.2);
+        box-shadow: 0 0.31vw 0.78vw rgba(0,0,0,0.2), 0vw -0.1vw 0.78vw rgba(255,255,255,0.2);
     }
 }
 

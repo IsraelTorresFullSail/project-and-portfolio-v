@@ -1,9 +1,11 @@
-body {
+html, body {
   font-family: 'Poppins';
   font-size: 16px;
   font-weight: 400;
   background-color: #1F2838;
-  background-repeat: no-repeat;
+  transition: all ease .3s;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 * {
@@ -31,30 +33,40 @@ a {
   background-color: #ffffff;
   border-top-left-radius: 1.79vw;
   border-bottom-left-radius: 1.79vw;
-  width: 94%;
+  width: 94vw;
 }
 
 .cont-nutrition {
   width: 55%;
-  padding: 3.57vw;
+  padding: 1.04vw 2.6vw 2.6vw 2.6vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
+.brand-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .right-side {
-  background-image: linear-gradient(to bottom left, #FFFFFF , #CCDBEC);
+  background-color: #deeaf6;
   border-top-left-radius: 1.79vw;
   border-bottom-left-radius: 1.79vw;
-  width: 45%;
-  padding: 0.89vw 0.89vw 2.98vw 0.89vw;
+  width: 45vw;
+  padding: 0.78vw 0.78vw 0.78vw 0.78vw;
+  box-shadow: inset 2px 0px 3px 0px rgba(0,0,0,0.16);
 }
 
 .container-logo {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding-right: 0.89vw;
+    width: 30%;
 }
 
 .logo {

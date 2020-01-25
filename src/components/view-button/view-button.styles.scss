@@ -4,12 +4,12 @@
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(to bottom, #6EACFF, #1865FA);
-    border-radius: 20px 0px 20px 0px;
-    padding: 25px;
-    min-width: 160px;
+    border-radius: 1.04vw 0vw 1.04vw 0vw;
+    padding: 1.3vw;
+    min-width: 8.33vw;
     color: #ffffff;
     font-family: 'Poppins';
-    font-size: 1.125em;
+    font-size: 0.94vw;
     font-weight: 700;
     position: absolute;
     right: 0;
@@ -17,9 +17,10 @@
     border: none;
     outline: none;
     cursor: pointer;
+    box-shadow: -5px -5px 10px 0px rgba(243,249,255,1), 5px 5px 10px 0px rgba(190,203,216,1);
 
     &:hover {
-        background-image: linear-gradient(to bottom, #6EACFF, #6EACFF);
+        background-image: linear-gradient(to bottom, #1865FA, #6EACFF);
     }
 }
 
@@ -28,19 +29,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom, transparent, transparent);
-    padding: 25px;
+    background-image: linear-gradient(to bottom, #deeaf6, #deeaf6);
+    padding: 1.3vw;
     color: #8ACD42;
-    font-size: 1.125em;
+    font-size: 0.94vw;
     font-weight: 700;
     position: absolute;
     right: 0;
     bottom: 0;
     border: none;
     outline: none;
+    box-shadow: -5px -5px 10px 0px rgba(243,249,255,1), 5px 5px 10px 0px rgba(190,203,216,1);
 
     &:hover {
-        background-image: linear-gradient(to bottom, transparent, transparent);
+        background-image: linear-gradient(to bottom, #deeaf6, #deeaf6);
         color: #FD9015;
     }
 }

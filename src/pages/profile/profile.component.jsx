@@ -55,20 +55,20 @@ class Profile extends React.Component {
                 <div className='imgWrapper'>
                     <img id='userImage' src={pictureLarge} alt='User Profile' data-img={mediumPicture} data-first={firstName} data-last={lastName}/>
                 </div>
-                <h2>{firstName} {lastName}</h2>
+                <h2 className='h2'>{firstName} {lastName}</h2>
                 <h3>Personal Info</h3>
                 <div className='cont-border'>
-                    <h4>Age: {age}</h4>
+                    <h4 className='h4'>Age: {age}</h4>
                     <p className='p'><MdPlace className='mdPlace' /> {street.number}{street.key}, {city}, {state} {postcode}</p>
                     <p className='p'><MdPhone className='mdPhone' /> {phone}</p>
                 </div>
                 <h3>Confidential Details</h3>
                 <div className='cont-border'>
                     <div className='details'>
-                        <h4>Username: {username}</h4>
+                        <h4 className='h4'>Username: {username}</h4>
                     </div>
                     <div className='details'>
-                        <h4>Password: {password}</h4>
+                        <h4 className='h4'>Password: {password}</h4>
                     </div>
                 </div>
             </div>

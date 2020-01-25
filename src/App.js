@@ -30,15 +30,16 @@ class App extends React.Component {
         <SideNav />
         <div className='left-side'>
           <div className='cont-nutrition'>
-            <CaloriesGoal />
+            <div className='brand-container'>
+              <Link className='container-logo' to='/'>
+                <img className='logo' src={logo} alt="Logo" />
+              </Link>
+              <CaloriesGoal />
+            </div>
             <RecipeForm />
             <NutritionAnalisys />
           </div>
           <div className='right-side'>
-            <Link className='container-logo' to='/'>
-              <img className='logo' src={logo} alt="Logo" />
-            </Link>
-
             <Switch>
               <Route exact path='/' component={NutritionPage} />
               <Route path='/home' component={NutritionPage} />

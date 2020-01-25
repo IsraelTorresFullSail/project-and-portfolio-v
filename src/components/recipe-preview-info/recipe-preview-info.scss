@@ -6,32 +6,32 @@
     position: absolute;
     left: 0;
     bottom: 0px;
-    padding: 25px 25px 0px 25px;
+    padding: 1.3vw 1.3vw 0vw 1.3vw;
 
     h3 {
         width: 100%;
         color: #3E4F70;
-        font-size: 1.25em;
+        font-size: 1.33vw;
         font-weight: 700;
-        margin-bottom: 0px !important;
+        margin-bottom: 0vw !important;
     }
 
     .info-item {
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-right: 25px;
+        margin-right: 1.3vw;
 
         .icon-info {
-            margin-right: 15px;
-            width: 24px;
-            height: 24px;
+            margin-right: 0.78vw;
+            width: 1.25vw;
+            height: 1.25vw;
             color: #4287FC;
         }
 
-        h5 {
+        h4 {
             font-family: 'Poppins';
-            font-size: 0.875em;
+            font-size: 0.729vw;
             font-weight: 700;
             color: #3E4F70;
         }

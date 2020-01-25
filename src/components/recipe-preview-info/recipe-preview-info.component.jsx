@@ -40,15 +40,15 @@ class RecipePreviewInfo extends React.Component {
                 <h3>{recipeName}</h3>
                 <div className='info-item'>
                     <GoFlame className='icon-info' />
-                    <h5>{calories} kcal</h5>    
+                    <h4>{calories} kcal</h4>    
                 </div>
                 <div className='info-item'>
                     <GiWheat className='icon-info' />
-                    <h5>{carbohydrates} g</h5>    
+                    <h4>{carbohydrates} g</h4>    
                 </div>
                 <div className='info-item'>
                     <GiFat className='icon-info' />
-                    <h5>{fats} g</h5>    
+                    <h4>{fats} g</h4>    
                 </div>
             </div>
         )

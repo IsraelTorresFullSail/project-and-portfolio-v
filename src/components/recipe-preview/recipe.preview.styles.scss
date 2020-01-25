@@ -3,11 +3,13 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    background-color: #ffffff;
+    background-color: #deeaf6;
     width: 90%;
-    min-height: 260px;
-    border-radius: 30px;
-    margin: 30px auto 35px auto;
+    min-height: 13.54vw;
+    border-radius: 1.56vw;
+    margin: 10.42vw auto 1.83vw auto;
+    box-shadow: -10px -10px 20px 0px rgba(243,249,255,1), 10px 10px 20px 0px rgba(190,203,216,1);
+    
 
     .recipe-info {
         display: flex;

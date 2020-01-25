@@ -70,13 +70,11 @@ class NutritionAnalisys extends React.Component {
             }
             
         }
-        console.log(imageRecipe);
         this.setState({imageRecipe: imageRecipe});
     }
 
     // Save recipe with image in Local storage
-    saveRecipe = e => {
-        e.preventDefault();
+    saveRecipe () {
          let recipe = [];
          recipe = [...this.state.results, ...this.state.imageRecipe];
 
@@ -88,6 +86,17 @@ class NutritionAnalisys extends React.Component {
         // Save all recipes back to local storage
         existingRecipes.push(recipe);
         localStorage.setItem('recipes', JSON.stringify(existingRecipes));
+    }
+
+    reloadPage() {
+        alert('Recipe saved successfully');
+        window.location.reload(false);
+    }
+
+    onClick = e => {
+        e.preventDefault();
+        this.saveRecipe();
+        this.reloadPage();
     }
 
     render() {
@@ -115,7 +124,7 @@ class NutritionAnalisys extends React.Component {
                     <UploadImageBox icon={<IoMdAdd className='icon' />} btnText={<h3>Add Image</h3>} onClick={this.onDrop} />
                 </div>
                 <div className='cont-btn-submit'>
-                    <CustomButton type='button' onClick={this.saveRecipe}> Save </CustomButton>
+                    <CustomButton type='button' onClick={this.onClick}> Save </CustomButton>
                 </div>
             </div>
         )

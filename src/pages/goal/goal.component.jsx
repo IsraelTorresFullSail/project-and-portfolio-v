@@ -21,7 +21,7 @@ class GoalPage extends React.Component {
     }
 
     handleSubmit = async event => {
-        event.preventDefault();
+        //event.preventDefault();
 
         // Save goal on Local Storage
         localStorage.setItem('goal', JSON.stringify(this.state.goal));
@@ -30,13 +30,24 @@ class GoalPage extends React.Component {
         this.setState({ goal: ''});
     }
 
+    reloadPage() {
+        alert('Goal saved successfully');
+        window.location.reload(false);
+    }
+
+    onSubmit = e => {
+        e.preventDefault();
+        this.handleSubmit();
+        this.reloadPage();
+    }
+
     render() {
 
         return(
             <div className='goal-wrapper'>
                 <h2>Make Your Goal:</h2>
                 <div className='form-wrapper'>
-                    <form onSubmit={this.handleSubmit}>
+                    <form onSubmit={this.onSubmit}>
                         <div className='cont-save-input'>
                             <div className='input'>
                                 <FormInput

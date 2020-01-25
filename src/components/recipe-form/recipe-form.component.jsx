@@ -3,6 +3,8 @@ import React from 'react';
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
+import { IoIosClose } from 'react-icons/io'
+
 import './recipe-form.styles.scss';
 
 class RecipeForm extends React.Component {
@@ -37,8 +39,16 @@ class RecipeForm extends React.Component {
         this.setState({ingredient: ''});
     }
 
-    refreshWindow() {
-        window.location.reload(false);
+    // Function to remove ingredient
+    removeIngred = key => {
+        let ingredList = [...this.state.ingredList]
+        for (let i = 0; i < ingredList.length; i++) {
+            if(ingredList[i].iId === key) {
+                this.state.ingredList.splice(i, 1)
+                this.setState({ingredList: this.state.ingredList})
+            }
+        }
+        console.log('Ingred Removed')
     }
 
     handleSubmit = async event => {
@@ -96,10 +106,11 @@ class RecipeForm extends React.Component {
                 localStorage.setItem('results', JSON.stringify(this.state.results));
             })
             .then (function() {
-                alert('Recipe added successfully');
+                alert('Recipe sent for analisys successfully');
                 window.location.reload(false);
             })
             .catch( err => {
+                alert('Recipe with insufficient quality to process correctly');
                 console.log(err);
             })
 
@@ -110,7 +121,10 @@ class RecipeForm extends React.Component {
 
     render() {
         let ingredList = this.state.ingredList.map(ingredient => {
-            return <div className='ingredient-item' key={ingredient.iId}><h6 className='h6'>{ingredient.iName}</h6></div>
+            return <div className='ingredient-item' key={ingredient.iId}>
+                        <h6 className='h6'>{ingredient.iName}</h6>
+                        <button className='remove-item' type='button' onClick={() => this.removeIngred(ingredient.iId)}><IoIosClose className='icon-remove' /></button> 
+                    </div>
         })
         return(
             <div className='recipe-form'>

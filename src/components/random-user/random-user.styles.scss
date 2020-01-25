@@ -96,3 +96,11 @@
     font-size: 1.2em;
     font-weight: 500;
 }
+
+.nav-profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}

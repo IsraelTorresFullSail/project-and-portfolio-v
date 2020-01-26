@@ -1,0 +1,123 @@
+.recipe-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #eaf2f9;
+    width: 90%;
+    height: auto;
+    min-height: 13.54vw;
+    border-radius: 1.56vw;
+    margin: 10.42vw auto 1.83vw auto;
+    padding: 0vw 3.125vw 5.21vw 3.125vw;
+    box-shadow: -10px -10px 20px 0px rgba(252,254,255,1), 10px 10px 20px 0px rgba(190,203,216,1);
+
+    h3 {
+        color: #3E4F70;
+        font-size: 1.33vw;
+        font-weight: 700;
+        margin-bottom: 2.34vw;
+        margin-top: -5.21vw;
+    }
+
+    .recipe-main-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+
+        .main-info-prep {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 100%;
+
+            h5 {
+                font-size: 1.08vw;
+                font-weight: 600;
+                color: #1F2838;
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+                width: 30%;
+            }
+    
+            p {
+                font-size: 0.83vw;
+                font-weight: 400;
+                color: #333333;
+            }
+        }
+
+        .main-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+    
+            h5 {
+                font-size: 1.08vw;
+                font-weight: 600;
+                color: #1F2838;
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+                width: 30%;
+            }
+    
+            p {
+                font-size: 0.83vw;
+                font-weight: 400;
+                color: #333333;
+            }
+        }
+    }
+
+    .table {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .th {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            max-height: 2.08vw;
+
+            .td {
+                width: 33.33%;
+
+                h6 {
+                    font-size: 0.83vw;
+                    font-weight: 700;
+                    color: #3E4F70;
+                    text-align: center;
+                }
+            }
+        }
+
+        .tr {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            max-height: 2.08vw;
+
+            .td {
+                width: 33.33%;
+
+                h6 {
+                    font-size: 0.83vw;
+                    font-weight: 700;
+                    color: #3E4F70;
+                }
+
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

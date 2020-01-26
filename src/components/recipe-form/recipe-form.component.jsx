@@ -94,7 +94,8 @@ class RecipeForm extends React.Component {
             })
             .then ( data => {
                 let results = [];
-                results.push({title: title, prep: preparation, calories: data.calories, dietLabels: data.dietLabels,
+                let key = Math.random();
+                results.push({recipeId: key, title: title, prep: preparation, calories: data.calories, dietLabels: data.dietLabels,
                              energy: data.totalNutrients.ENERC_KCAL.quantity, proteins: data.totalNutrients.PROCNT.quantity,
                              fats: data.totalNutrients.FAT.quantity, saturated: data.totalNutrients.FASAT.quantity,
                              carbohydrates: data.totalNutrients.CHOCDF.quantity, trans: data.totalNutrients.FATRN.quantity,

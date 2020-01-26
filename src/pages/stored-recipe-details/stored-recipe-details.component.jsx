@@ -1,27 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import './recipe-details.styles.scss';
+import './stored-recipe-details.styles.scss';
 
 import RecipeImage from '../../components/recipe-image/recipe-image.component';
 import ViewButton from '../../components/view-button/view-button.component';
 
-class RecipeDetailsPage extends React.Component {
+class StoredRecipeDetails extends React.Component {
     constructor() {
         super();
 
         this.state = {
-            currentRecipe: []
+            storedRecipes: [],
+            selectItemId: ''
         }
     }
 
     componentDidMount() {
-        let currentRecipe;                                                                                                                  // eslint-disable-next-line
-        if(currentRecipe = JSON.parse(localStorage.getItem('currentRecipe'))) {
-            currentRecipe = JSON.parse(localStorage.getItem('currentRecipe'));
-            this.setState({currentRecipe: currentRecipe});
+        let storedRecipes; 
+        let selectItemId;                                                                                                                               // eslint-disable-next-line
+        if((storedRecipes = JSON.parse(localStorage.getItem('recipes'))) && (selectItemId = JSON.parse(localStorage.getItem('selectItemId')))) {
+            storedRecipes = JSON.parse(localStorage.getItem('recipes'));
+            selectItemId = JSON.parse(localStorage.getItem('selectItemId'));
+            this.setState({storedRecipes: storedRecipes, selectItemId: selectItemId});
         }
-        
     }
 
     render() {
@@ -40,22 +42,25 @@ class RecipeDetailsPage extends React.Component {
         let sugars = '';
         let cholesterol = '';
         let sodium = '';
-        for(let i = 0; i < this.state.currentRecipe.length; i++) {
-            recipeImage = this.state.currentRecipe[1].image;
-            recipeName = this.state.currentRecipe[0].title;
-            preparation = this.state.currentRecipe[0].prep;
-            dietLabels = this.state.currentRecipe[0].dietLabels;
-            calories = this.state.currentRecipe[0].calories;
-            fats = this.state.currentRecipe[0].fats.toFixed(2);
-            carbohydrates = this.state.currentRecipe[0].carbohydrates.toFixed(2);
-            proteins = this.state.currentRecipe[0].proteins.toFixed(2);
-            energy = this.state.currentRecipe[0].energy.toFixed(2);
-            saturated = this.state.currentRecipe[0].saturated.toFixed(2);
-            trans = this.state.currentRecipe[0].trans.toFixed(2);
-            fiber = this.state.currentRecipe[0].fiber.toFixed(2);
-            sugars = this.state.currentRecipe[0].sugars.toFixed(2);
-            cholesterol = this.state.currentRecipe[0].cholesterol.toFixed(2);
-            sodium = this.state.currentRecipe[0].sodium.toFixed(2);
+
+        for(let i = 0; i < this.state.storedRecipes.length; i++) {
+            if(this.state.storedRecipes[i][0].recipeId === this.state.selectItemId) {
+                recipeImage = this.state.storedRecipes[i][1].image;
+                recipeName = this.state.storedRecipes[i][0].title;
+                preparation = this.state.storedRecipes[i][0].prep;
+                dietLabels = this.state.storedRecipes[i][0].dietLabels;
+                calories = this.state.storedRecipes[i][0].calories;
+                fats = this.state.storedRecipes[i][0].fats.toFixed(2);
+                carbohydrates = this.state.storedRecipes[i][0].carbohydrates.toFixed(2);
+                proteins = this.state.storedRecipes[i][0].proteins.toFixed(2);
+                energy = this.state.storedRecipes[i][0].energy.toFixed(2);
+                saturated = this.state.storedRecipes[i][0].saturated.toFixed(2);
+                trans = this.state.storedRecipes[i][0].trans.toFixed(2);
+                fiber = this.state.storedRecipes[i][0].fiber.toFixed(2);
+                sugars = this.state.storedRecipes[i][0].sugars.toFixed(2);
+                cholesterol = this.state.storedRecipes[i][0].cholesterol.toFixed(2);
+                sodium = this.state.storedRecipes[i][0].sodium.toFixed(2);
+            }
         }
 
         return(
@@ -200,7 +205,7 @@ class RecipeDetailsPage extends React.Component {
                         </div>
                     </div>
                 </div>
-                <Link className='link' to='/home'>
+                <Link className='link' to='/recipes'>
                     <ViewButton type='button' > Close </ViewButton>
                 </Link>
             </div>
@@ -208,4 +213,4 @@ class RecipeDetailsPage extends React.Component {
     }
 };
 
-export default RecipeDetailsPage;
+export default StoredRecipeDetails;

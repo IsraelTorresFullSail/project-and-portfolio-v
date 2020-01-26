@@ -20,16 +20,18 @@ class LastRecipes extends React.Component {
             recipes = JSON.parse(localStorage.getItem('recipes'));
             this.setState({recipes: recipes});
         }                                              
-        
+    }
+
+    setId(id) {
+        localStorage.setItem('selectItemId', JSON.stringify(id));
     }
 
     render() {
-        let recipeItem = this.state.recipes.slice(0, 8).map(item => {
-            let key = Math.random();
-            return <div key={key} className='recipe-item'>
+        let recipeItem = this.state.recipes.reverse().slice(0, 8).map(item => {
+            return  <Link key={item[0].recipeId} className='recipe-item' onClick={this.setId(item[0].recipeId)} to='/stored-recipe-details'>
                         <img className='last-image' src={item[1].image} alt='Recipe' />
                         <h4>{item[0].title}</h4>
-                    </div>
+                    </Link>
         })
 
         return(

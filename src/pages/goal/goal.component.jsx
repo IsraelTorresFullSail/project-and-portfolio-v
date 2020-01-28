@@ -5,6 +5,8 @@ import './goal.styes.scss';
 import FormInput from '../../components/form-input/form-input.component';
 import CustomButton from '../../components/custom-button/custom-button.component';
 
+import swal from 'sweetalert';
+
 class GoalPage extends React.Component {
     constructor() {
         super();
@@ -30,8 +32,11 @@ class GoalPage extends React.Component {
     }
 
     reloadPage() {
-        alert('Goal saved successfully');
-        window.location.reload(false);
+        swal("Good job!", "Goal saved", "success")
+        .then(() => {
+            window.location.reload(false);
+        })
+        
     }
 
     onSubmit = e => {

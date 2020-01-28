@@ -18,7 +18,8 @@
     "react-images-upload": "^1.2.7",
     "react-responsive-modal": "^4.0.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.0"
+    "react-scripts": "3.3.0",
+    "sweetalert": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

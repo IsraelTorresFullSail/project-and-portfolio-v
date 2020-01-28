@@ -9,6 +9,7 @@ import { MdFitnessCenter } from 'react-icons/md';
 import { GiFat } from 'react-icons/gi';
 import { GiWheat } from 'react-icons/gi';
 import { IoMdAdd } from 'react-icons/io';
+import swal from 'sweetalert';
 
 import './nutrition-analisys.styles.scss';
 
@@ -65,7 +66,7 @@ class NutritionAnalisys extends React.Component {
 
         for (let i = 0; i < images.length; i++) {
             if(images[i].id === id) {
-                alert('Uploading a stock image for testing reason');
+                swal("Image info:", "Uploading a stock image for testing reason", "info");
                 imageRecipe = [{image: images[i].src, imgId: images[i].id}]
             }
             
@@ -89,8 +90,10 @@ class NutritionAnalisys extends React.Component {
     }
 
     reloadPage() {
-        alert('Recipe saved successfully');
-        window.location.reload(false);
+        swal("Good job!", "Recipe saved", "success")
+        .then(() => {
+            window.location.reload(false);
+        })
     }
 
     onClick = e => {

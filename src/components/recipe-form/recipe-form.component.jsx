@@ -4,6 +4,7 @@ import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
 import { IoIosClose } from 'react-icons/io'
+import swal from 'sweetalert';
 
 import './recipe-form.styles.scss';
 
@@ -107,11 +108,13 @@ class RecipeForm extends React.Component {
                 localStorage.setItem('results', JSON.stringify(this.state.results));
             })
             .then (function() {
-                alert('Recipe sent for analisys successfully');
-                window.location.reload(false);
+                swal("Good job!", "Recipe sent for analisys!", "success")
+                .then(() => {
+                    window.location.reload(false);
+                })
             })
             .catch( err => {
-                alert('Recipe with insufficient quality to process correctly');
+                swal("Oops!", "Recipe with insufficient quality to process correctly", "error");
                 console.log(err);
             })
 

@@ -21,7 +21,6 @@ class GoalPage extends React.Component {
     }
 
     handleSubmit = async event => {
-        //event.preventDefault();
 
         // Save goal on Local Storage
         localStorage.setItem('goal', JSON.stringify(this.state.goal));

@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/project-and-portfolio-v/static/css/main.b7e4f70b.chunk.css",
-    "main.js": "/project-and-portfolio-v/static/js/main.a64a30a0.chunk.js",
-    "main.js.map": "/project-and-portfolio-v/static/js/main.a64a30a0.chunk.js.map",
+    "main.js": "/project-and-portfolio-v/static/js/main.aded9db7.chunk.js",
+    "main.js.map": "/project-and-portfolio-v/static/js/main.aded9db7.chunk.js.map",
     "runtime-main.js": "/project-and-portfolio-v/static/js/runtime-main.4ca1b7ba.js",
     "runtime-main.js.map": "/project-and-portfolio-v/static/js/runtime-main.4ca1b7ba.js.map",
-    "static/js/2.73d2dd0b.chunk.js": "/project-and-portfolio-v/static/js/2.73d2dd0b.chunk.js",
-    "static/js/2.73d2dd0b.chunk.js.map": "/project-and-portfolio-v/static/js/2.73d2dd0b.chunk.js.map",
+    "static/js/2.d9c11380.chunk.js": "/project-and-portfolio-v/static/js/2.d9c11380.chunk.js",
+    "static/js/2.d9c11380.chunk.js.map": "/project-and-portfolio-v/static/js/2.d9c11380.chunk.js.map",
     "index.html": "/project-and-portfolio-v/index.html",
-    "precache-manifest.f7b93b4744fe21754c90d2d3c625a969.js": "/project-and-portfolio-v/precache-manifest.f7b93b4744fe21754c90d2d3c625a969.js",
+    "precache-manifest.3a3e8ee2c9ebd03b6cac9f2248345cf3.js": "/project-and-portfolio-v/precache-manifest.3a3e8ee2c9ebd03b6cac9f2248345cf3.js",
     "service-worker.js": "/project-and-portfolio-v/service-worker.js",
     "static/css/main.b7e4f70b.chunk.css.map": "/project-and-portfolio-v/static/css/main.b7e4f70b.chunk.css.map",
-    "static/js/2.73d2dd0b.chunk.js.LICENSE": "/project-and-portfolio-v/static/js/2.73d2dd0b.chunk.js.LICENSE",
+    "static/js/2.d9c11380.chunk.js.LICENSE": "/project-and-portfolio-v/static/js/2.d9c11380.chunk.js.LICENSE",
     "static/media/instructions.styles.scss": "/project-and-portfolio-v/static/media/bg-instructions.7374c34f.jpg",
     "static/media/profile.styles.scss": "/project-and-portfolio-v/static/media/bg-profile.c4f3114a.jpg",
     "static/media/goal.styes.scss": "/project-and-portfolio-v/static/media/goal-bg.d74384de.jpg",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.4ca1b7ba.js",
-    "static/js/2.73d2dd0b.chunk.js",
+    "static/js/2.d9c11380.chunk.js",
     "static/css/main.b7e4f70b.chunk.css",
-    "static/js/main.a64a30a0.chunk.js"
+    "static/js/main.aded9db7.chunk.js"
   ]
 }

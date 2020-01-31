@@ -29,4 +29,16 @@
       background-image: linear-gradient(to bottom, #FEBF7A , #FEBF7A);
     }
   }
+
+  /* ============ Media Query ============= */
+  @media screen and (max-width: 1024px) {
+    width: 9.53vw;
+    height: 4.07vw;
+    font-size: 1.44vw;
+    font-weight: 600;
+
+    &.btn-add {
+      width: 6.55vw;
+    }
+  }
 }

@@ -100,4 +100,57 @@
             }
         }
     }
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) {
+        padding: 6.17vw 1.3vw 0.26vw 1.3vw;
+
+        .imgWrapper {
+            margin: 0 auto;
+            width: 8.67vw;
+            height: 8.67vw;
+            border-radius: 50%;
+            box-shadow: 0vw 0.26vw 1.3vw 0vw rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+    
+            img {
+                width: 100%;
+                max-width: 8.67vw;
+                height: auto;
+            }
+        }
+
+        .h2 {
+            font-size: 1.7vw;
+            margin: 2.04vw auto;
+        }
+    
+        h3 {
+            font-size: 1.73vw;
+        }
+
+        .cont-border {
+        
+            .h4 {
+                font-size: 1.44vw;
+            }
+        
+            .p {
+                font-size: 1.23vw;
+        
+                .mdPlace {
+                    width: 1.58vw;
+                    height: 1.58vw;
+                    margin-right: 0.56vw;
+                }
+                
+                .mdPhone {
+                    width: 1.58vw;
+                    height: 1.58vw;
+                    margin-right: 0.56vw;
+                }
+            }
+        }
+    
+    }
 }

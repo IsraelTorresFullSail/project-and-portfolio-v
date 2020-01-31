@@ -6,6 +6,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) { 
+        width: 10vw;
+    }
 }
 
 .options {
@@ -44,7 +49,25 @@
         background-color: #ffffff;
         color: #1a1b1e;
     }
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) { 
+        font-size: 1.15vw;
+        border-radius: 1.54vw;
+        width: 8.21vw;
+        height: 8.21vw;
+        padding: 0.54vw 0.125vw;
+        margin-bottom: 1.52vw;
+
+        .icon {
+            width: 2.67vw;
+            height: auto;
+            margin-bottom: 0.52vw;
+        }
+    }
 }
+
+
 
 
 

@@ -28,4 +28,12 @@ $main-color: black;
       outline: none;
     }
   }
+  /* ============ Media Query ============= */
+  @media screen and (max-width: 1024px) {
+    width: 80%;
+
+    .form-input {
+      font-size: 1.44vw;
+    }
+  }
 }

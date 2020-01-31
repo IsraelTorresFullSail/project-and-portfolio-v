@@ -22,4 +22,16 @@
     &:hover {
         background-image: linear-gradient(to bottom, #FEBF7A, #FEBF7A);
     }
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) {
+        width: 24%;
+        margin-bottom: 1.04vw;
+        height: 12.68vw;
+        font-size: 1.03vw;
+
+        h3 {
+            font-size: 1.73vw;
+        }
+    }
 }

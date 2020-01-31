@@ -23,3 +23,11 @@ code {
   outline: none;
   cursor: pointer;
 }
+
+/* ============ Media Query ============= */
+@media screen and (max-width: 1024px) {
+  .styles_modal__gNwvD {
+    max-width: 49.76vw;
+    border-radius: 1.04vw;
+  }
+}

@@ -5,6 +5,11 @@ h1 {
     font-size: 3.125vw;
     line-height: 120%;
     color: #3E4F70;
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) {
+        font-size: 3.525vw;
+    }
 }
 
 .cont-add-ingred {
@@ -66,5 +71,10 @@ h1 {
                 height: 1.67vw;
             }
         }
+    }
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) {
+        margin-bottom: 0.54vw;
     }
 }

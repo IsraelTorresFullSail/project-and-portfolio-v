@@ -16,4 +16,9 @@
         flex-direction: row;
         align-items: center;
     }
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) {
+        min-height: 18.54vw;
+    }
 }

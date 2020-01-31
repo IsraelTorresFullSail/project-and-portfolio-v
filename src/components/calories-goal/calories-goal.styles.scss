@@ -4,6 +4,7 @@
     justify-content: flex-start;
     align-items: center;
     width: 70%;
+    flex-wrap: wrap;
 
     .calories-box {
         display: flex;
@@ -40,6 +41,39 @@
                 line-height: 120%;
                 font-weight: 700;
                 text-align: center;
+            }
+        }
+    }
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) {
+        width: 60%;
+
+        .calories-box {
+            width: 100%;
+            margin-bottom: 1.04vw;
+            padding-left: 2vw;
+
+            p {
+                font-size: 1.23vw;
+                font-weight: 400;
+                line-height: 150%;
+                margin-right: 0vw;
+            }
+
+            .calories-number {
+                padding: 1.04vw;
+                width: 6.95vw;
+                max-height: 1.8vw;
+                margin-right: 2vw;
+    
+                h4 {
+                    color: #3E4F70;
+                    font-size: 1.129vw;
+                    line-height: 120%;
+                    font-weight: 700;
+                    text-align: center;
+                }
             }
         }
     }

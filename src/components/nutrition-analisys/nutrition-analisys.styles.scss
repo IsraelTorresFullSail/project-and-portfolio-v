@@ -28,11 +28,27 @@
         flex-direction: row;
         justify-content: flex-end;
     }
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) {
+        .result-grid {
+            margin-bottom: -5.54vw;
+        }
+        h2 {
+            font-size: 2.48vw;
+        }
+    }
 }
 
 .icon {
     width: 2.08vw;
     height: 2.08vw;
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) {
+        width: 3.08vw;
+        height: 3.08vw;
+    }
 }
 
 h3 {
@@ -40,4 +56,9 @@ h3 {
     font-size: 1.33vw;
     line-height: 120%;
     font-weight: 700;
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) {
+        font-size: 1.73vw;
+    }
 }

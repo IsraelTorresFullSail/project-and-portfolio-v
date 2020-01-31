@@ -22,6 +22,12 @@
     &:hover {
         background-image: linear-gradient(to bottom, #1865FA, #6EACFF);
     }
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) {
+        font-size: 1.34vw;
+        padding: 1.1vw;
+    }
 }
 
 .btn-view-all {
@@ -44,5 +50,11 @@
     &:hover {
         background-image: linear-gradient(to bottom, #deeaf6, #deeaf6);
         color: #FD9015;
+    }
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) {
+        font-size: 1.34vw;
+        padding: 1.1vw;
     }
 }

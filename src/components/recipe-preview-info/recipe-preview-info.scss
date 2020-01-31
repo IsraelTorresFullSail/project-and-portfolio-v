@@ -35,5 +35,23 @@
             font-weight: 700;
             color: #3E4F70;
         }
+
+        /* ============ Media Query ============= */
+        @media screen and (max-width: 1024px) {
+            .icon-info {
+                width: 1.75vw;
+                height: 1.75vw;
+            }
+            h4 {
+                font-size: 1.129vw;
+            }
+        }
+    }
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) {
+        h3 {
+            font-size: 1.73vw;
+        }
     }
 }

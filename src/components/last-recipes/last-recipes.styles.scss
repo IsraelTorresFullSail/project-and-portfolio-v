@@ -52,4 +52,27 @@
         max-height: 4.01vw;
         padding: 1.3vw;
     }
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) {
+        min-height: 28.44vw;
+        margin-bottom: 2vw;
+
+        .recipe-item {
+            width: 33%;
+            margin-bottom: 0.54vw;
+    
+            .last-image {
+                width: 7.55vw;
+                height: 7.55vw;
+            }
+    
+            h4 {
+                font-size: 1.129vw;
+                line-height: 120%;
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+    }
 }

@@ -12,4 +12,12 @@
     font-family: 'Poppins';
     font-size: 0.83vw;
     font-weight: 700;
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) {
+        width: 24%;
+        margin-bottom: 1.04vw;
+        height: 12.68vw;
+        font-size: 1.03vw;
+    }
 }

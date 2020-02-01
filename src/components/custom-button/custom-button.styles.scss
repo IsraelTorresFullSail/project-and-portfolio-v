@@ -41,4 +41,14 @@
       width: 6.55vw;
     }
   }
+  @media screen and (max-width: 768px) {
+    width: 10.53vw;
+    height: 5.07vw;
+    font-size: 1.84vw;
+    font-weight: 600;
+
+    &.btn-add {
+      width: 7.55vw;
+    }
+  }
 }

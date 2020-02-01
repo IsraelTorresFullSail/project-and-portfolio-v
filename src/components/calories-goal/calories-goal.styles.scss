@@ -48,6 +48,7 @@
     /* ============ Media Query ============= */
     @media screen and (max-width: 1024px) {
         width: 60%;
+        margin-top: 1.04vw;
 
         .calories-box {
             width: 100%;
@@ -73,6 +74,33 @@
                     line-height: 120%;
                     font-weight: 700;
                     text-align: center;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        width: 100%;
+
+        .calories-box {
+            width: 40%;
+            margin-bottom: 1.04vw;
+            padding-left: 0vw;
+            margin-left: 2vw;
+            margin-right: 2vw;
+
+            p {
+                font-size: 1.63vw;
+                line-height: 170%;
+            }
+
+            .calories-number {
+                padding: 1.04vw;
+                width: 8.95vw;
+                max-height: 2.8vw;
+                margin-right: 0vw;
+    
+                h4 {
+                    font-size: 1.529vw;
                 }
             }
         }

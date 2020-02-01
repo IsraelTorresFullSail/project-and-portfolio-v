@@ -20,4 +20,11 @@
         height: 12.68vw;
         font-size: 1.03vw;
     }
+    @media screen and (max-width: 786px) {
+        width: 48%;
+        margin-bottom: 2.04vw;
+        height: 25.68vw;
+        font-size: 2vw;
+        padding: 3.56vw;
+    }
 }

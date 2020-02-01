@@ -40,5 +40,18 @@
                 text-align: center;
             }
         }
+
+        @media screen and (max-width: 768px) {
+            .profile {
+                width: 6.5vw;
+                height: 6.5vw;
+                border-radius: 1.32vw;
+            }
+            p {
+                font-size: 1.63vw;
+                font-weight: 400;
+                text-align: center;
+            }
+        }
     }
 }

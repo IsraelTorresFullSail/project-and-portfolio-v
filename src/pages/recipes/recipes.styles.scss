@@ -38,4 +38,43 @@
             text-align: center;
         }
     }
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) {
+        padding: 3.3vw 1.3vw 4.17vw 1.3vw;
+
+        .recipe-item {
+            width: 33%;
+            margin-bottom: 0.54vw;
+    
+            .last-image {
+                width: 7.55vw;
+                height: 7.55vw;
+            }
+    
+            h4 {
+                font-size: 1.129vw;
+                line-height: 120%;
+                font-weight: 700;
+                text-align: center;
+            }
+        }
+    }
+    @media screen and (max-width: 768px) {
+        padding: 3.3vw 1.3vw 4.17vw 1.3vw;
+
+        .recipe-item {
+            width: 50%;
+            margin-bottom: 1.54vw;
+    
+            .last-image {
+                width: 8.55vw;
+                height: 8.55vw;
+            }
+    
+            h4 {
+                font-size: 1.529vw;
+            }
+        }
+    }
 }

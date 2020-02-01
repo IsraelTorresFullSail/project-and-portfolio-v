@@ -75,4 +75,21 @@
             }
         }
     }
+    @media screen and (max-width: 768px) {
+        padding: 3.3vw 1.04vw 5.17vw 1.04vw;
+
+        .recipe-item {
+            width: 50%;
+            margin-bottom: 1.54vw;
+    
+            .last-image {
+                width: 8.55vw;
+                height: 8.55vw;
+            }
+    
+            h4 {
+                font-size: 1.529vw;
+            }
+        }
+    }
 }

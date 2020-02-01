@@ -28,6 +28,10 @@
         font-size: 1.34vw;
         padding: 1.1vw;
     }
+    @media screen and (max-width: 768px) {
+        font-size: 1.74vw;
+        padding: 1.5vw;
+    }
 }
 
 .btn-view-all {
@@ -56,5 +60,10 @@
     @media screen and (max-width: 1024px) {
         font-size: 1.34vw;
         padding: 1.1vw;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 1.74vw;
+        padding: 1.5vw;
+        min-width: 14.33vw;
     }
 }

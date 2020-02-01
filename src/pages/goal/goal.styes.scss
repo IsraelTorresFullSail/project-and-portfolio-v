@@ -31,7 +31,7 @@
         width: 99%;
         margin-top: 2.6vw;
         border-radius: 0.26vw;
-        padding-left: 1.04vw;;
+        padding-left: 1.04vw;
         box-shadow: -10px -10px 20px 0px rgba(252,254,255,1), 10px 10px 20px 0px rgba(190,203,216,1);
 
         .cont-save-input {
@@ -46,6 +46,50 @@
             }
             .button {
                 width: 30%;
+            }
+        }
+    }
+
+    /* ============ Media Query ============= */
+    @media screen and (max-width: 1024px) {
+        h2 {
+            font-size: 2.48vw;
+        }
+
+        .form-wrapper {
+            padding-left: 1.54vw;
+            padding-right: 1.54vw;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        min-height: 42vw;
+
+        h2 {
+            font-size: 2.88vw;
+        }
+
+        .form-wrapper {
+            padding: 2vw !important;
+
+            .cont-save-input {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+
+                .input {
+                    width: 100%;
+                    margin-bottom: 1.5vw;
+                    .group {
+                        width: 100% !important;
+                    }
+                }
+                .button {
+                    width: 100%;
+                    margin-bottom: 1.5vw;
+                    .custom-button {
+                        width: 100% !important;
+                    }
+                }
             }
         }
     }

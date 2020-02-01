@@ -36,4 +36,12 @@ $main-color: black;
       font-size: 1.44vw;
     }
   }
+  @media screen and (max-width: 768px) {
+    width: 82%;
+
+    .form-input {
+      font-size: 1.84vw;
+      min-height: 5.5vw;
+    }
+  }
 }

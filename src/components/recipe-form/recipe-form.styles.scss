@@ -10,6 +10,9 @@ h1 {
     @media screen and (max-width: 1024px) {
         font-size: 3.525vw;
     }
+    @media screen and (max-width: 768px) {
+        font-size: 3.925vw;
+    }
 }
 
 .cont-add-ingred {
@@ -71,10 +74,39 @@ h1 {
                 height: 1.67vw;
             }
         }
+        /* ============ Media Query ============= */
+        @media screen and (max-width: 1024px) {
+            height: 3.6vw;
+
+            .h6 {
+                font-size: 1.23vw;
+            }
+            .remove-item {
+                .icon-remove {
+                    width: 2.67vw;
+                    height: 2.67vw;
+                }
+            }
+        }
+        @media screen and (max-width: 768px) {
+            height: 4vw;
+            .h6 {
+                font-size: 1.63vw;
+            }
+            .remove-item {
+                .icon-remove {
+                    width: 3.27vw;
+                    height: 3.27vw;
+                }
+            }
+        }
     }
 
     /* ============ Media Query ============= */
     @media screen and (max-width: 1024px) {
         margin-bottom: 0.54vw;
+    }
+    @media screen and (max-width: 768px) {
+        margin-bottom: 1.54vw;
     }
 }

@@ -153,4 +153,47 @@
         }
     
     }
+    @media screen and (max-width: 768px) {
+        padding: 8.17vw 1.3vw 0.26vw 1.3vw;
+
+        .imgWrapper {
+            width: 10.67vw;
+            height: 10.67vw;
+    
+            img {
+                max-width: 10.67vw;
+            }
+        }
+
+        .h2 {
+            font-size: 2.1vw;
+            margin: 4.04vw auto;
+        }
+    
+        h3 {
+            font-size: 2.13vw;
+        }
+
+        .cont-border {
+        
+            .h4 {
+                font-size: 1.84vw;
+            }
+        
+            .p {
+                font-size: 1.63vw;
+        
+                .mdPlace {
+                    width: 2.08vw;
+                    height: 2.08vw;
+                }
+                
+                .mdPhone {
+                    width: 2.08vw;
+                    height: 2.08vw;
+                }
+            }
+        }
+    
+    }
 }
